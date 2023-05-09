@@ -1,4 +1,4 @@
-﻿using MedCare_Hospital.Models;
+﻿using MedCare_Hospital.DataStructure;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 

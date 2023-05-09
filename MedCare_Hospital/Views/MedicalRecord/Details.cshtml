@@ -1,0 +1,34 @@
+﻿@model MyHospital_MVC.Models.MedicalRecord
+
+<h2>Medical Record Details</h2>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td><strong>Medical Record ID:</strong></td>
+            <td>@Model.MedicalRecordId</td>
+        </tr>
+        <tr>
+            <td><strong>Diagnosis:</strong></td>
+            <td>@Model.Diagnosis</td>
+        </tr>
+        <tr>
+            <td><strong>Treatment:</strong></td>
+            <td>@Model.Treatment</td>
+        </tr>
+        <tr>
+            <td><strong>Medication:</strong></td>
+            <td>@Model.Medication</td>
+        </tr>
+        <tr>
+            <td><strong>Laboratory Result:</strong></td>
+            <td>@Model.LabResult</td>
+        </tr>
+        <tr>
+            <td><strong>History:</strong></td>
+            <td>@Model.History</td>
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-outline-secondary" asp-controller="MedicalRecord" asp-action="Index">Back to List</a>

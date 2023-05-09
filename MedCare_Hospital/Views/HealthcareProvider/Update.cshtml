@@ -1,0 +1,48 @@
+﻿@model MyHospital_MVC.Models.HealthcareProvider
+
+@{
+    ViewData["Title"] = "Edit Healthcare Provider";
+}
+
+<h1 class="text-center">Edit Healthcare Provider</h1>
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <div class="row">
+            <div class="col-md-8 offset-4">
+                <form asp-action="Update">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <p>
+                        <h1>Update Actor</h1>
+                    </p>
+                    <img class="rounded-circle" src="@Url.Content(Model.Photo)" alt="@Model.Name" style="max-width:150px; float:left; margin-right:2000px" />
+                    <div class="form-group">
+                        <label asp-for="Photo" class="control-label"></label>
+                        <input asp-for="Photo" class="form-control" />
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Speciality" class="control-label"></label>
+                        <input asp-for="Speciality" class="form-control" />
+                        <span asp-validation-for="Speciality" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Contact" class="control-label"></label>
+                        <input asp-for="Contact" class="form-control" />
+                        <span asp-validation-for="Contact" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-outline-success float-right" asp-action="Update" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show All Healthcare Providers</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

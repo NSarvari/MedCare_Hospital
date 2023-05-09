@@ -1,0 +1,30 @@
+﻿@model MyHospital_MVC.Models.Appointment
+
+<h2>Appointment Details</h2>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td><strong>Appointment ID:</strong></td>
+            <td>@Model.AppointmentId</td>
+        </tr>
+        <tr>
+            <td><strong>Appointment Date:</strong></td>
+            <td>@Model.AppointmentDate</td>
+        </tr>
+        <tr>
+            <td><strong>Reason:</strong></td>
+            <td>@Model.Reason</td>
+        </tr>
+        <tr>
+            <td><strong>Patient Id:</strong></td>
+            <td>@Model.PatientId</td>
+        </tr>
+        <tr>
+            <td><strong>Healthcare Provider Id:</strong></td>
+            <td>@Model.HealthcareProviderId</td>
+        </tr>
+    </tbody>
+</table>
+
+<a class="btn btn-outline-secondary" asp-controller="Appointment" asp-action="Index">Back to List</a>

@@ -1,0 +1,34 @@
+﻿@model MyHospital_MVC.Models.Appointment
+
+@{
+    ViewData["Title"] = "Edit Appointment";
+}
+
+<h1>Edit Appointment</h1>
+
+<form asp-action="Update">
+    <div class="form-group">
+        <label asp-for="AppointmentDate" class="control-label"></label>
+        <input asp-for="AppointmentDate" class="form-control" />
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Reason" class="control-label"></label>
+        <input asp-for="Reason" class="form-control" />
+        <span asp-validation-for="Reason" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PatientId" class="control-label"></label>
+        <input asp-for="PatientId" class="form-control" />
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HealthcareProviderId" class="control-label"></label>
+        <input asp-for="HealthcareProviderId" class="form-control" />
+        <span asp-validation-for="HealthcareProviderId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary" asp-action="Update" />
+        <a class="btn btn-outline-secondary" asp-action="Index">Show All Appointments</a>
+    </div>
+</form>

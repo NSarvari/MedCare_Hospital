@@ -1,0 +1,44 @@
+﻿@model MyHospital_MVC.Models.MedicalRecord
+
+@{
+    ViewData["Title"] = "Edit Medical Record";
+}
+
+<h1>Edit Medical Record</h1>
+
+<form asp-action="Update">
+    <div class="form-group">
+        <label asp-for="Diagnosis" class="control-label"></label>
+        <input asp-for="Diagnosis" class="form-control" />
+        <span asp-validation-for="Diagnosis" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Treatment" class="control-label"></label>
+        <input asp-for="Treatment" class="form-control" />
+        <span asp-validation-for="Treatment" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Medication" class="control-label"></label>
+        <input asp-for="Medication" class="form-control" />
+        <span asp-validation-for="Medication" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LabResult" class="control-label"></label>
+        <input asp-for="LabResult" class="form-control" />
+        <span asp-validation-for="LabResult" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="History" class="control-label"></label>
+        <input asp-for="History" class="form-control" />
+        <span asp-validation-for="History" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PatientId" class="control-label"></label>
+        <input asp-for="PatientId" class="form-control" />
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-primary" asp-action="Update" />
+        <a class="btn btn-outline-secondary" asp-action="Index">Show All MedicalRecords</a>
+    </div>
+</form>

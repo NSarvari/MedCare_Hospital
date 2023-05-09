@@ -1,0 +1,43 @@
+﻿@model MyHospital_MVC.Models.HealthcareProvider
+
+<h2>Delete Healthcare Provider</h2>
+
+<p>Are you sure you want to delete this Healthcare Provider?</p>
+
+<form asp-action="Delete">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Photo)
+        </dt>
+        <dd class="col-sm-10">
+            <img class="rounded-circle" src="@Url.Content(Model.Photo)" alt="@Model.Name" style="max-width:150px; float:left; margin-right:2000px" />
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Speciality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Speciality)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+    </dl>
+    <div class="form-group">
+        <input type="hidden" asp-id="Id" />
+        <input type="submit" value="Confirm" class="btn btn-outline-danger float-right" asp-action="Delete" />
+        <a class="btn btn-outline-secondary" asp-action="Index">Show All Healthcare Providers</a>
+    </div>
+</form>
+

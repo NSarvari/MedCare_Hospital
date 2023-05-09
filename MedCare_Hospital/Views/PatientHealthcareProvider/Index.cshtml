@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MyHospital_MVC.Models.PatientHealthcareProvider>
+<!DOCTYPE html>
+<h1>Patient and HealthcareProvider Relations</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Patient ID</th>
+            <th>Healthcare Provider ID</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var patientHealthcareProvider in Model)
+        {
+            <tr>
+                <td>@patientHealthcareProvider.PatientId</td>
+                <td>@patientHealthcareProvider.HealthcareProviderId</td>
+                <td class="align-middle">
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@patientHealthcareProvider.PatientId"><i class="bi bi-trash"></i>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="PatientHealthcareProvider" asp-action="Create" class="btn btn-outline-success">Add New Patient and HealthcareProvider Relation</a>

@@ -1,4 +1,4 @@
-namespace MedCare_Hospital.Models
+namespace MedCare_Hospital.DataStructure
 {
     public class ErrorViewModel
     {

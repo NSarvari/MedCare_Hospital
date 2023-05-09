@@ -1,0 +1,19 @@
+﻿@model MyHospital_MVC.Models.PatientHealthcareProvider
+
+<h2>Create Patient and HealthcareProvider Relation</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="PatientId">Patient ID</label>
+        <input asp-for="PatientId" class="form-control" />
+        <span asp-validation-for="PatientId" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="HealthcareProviderId">Healthcare Provider ID</label>
+        <input asp-for="HealthcareProviderId" class="form-control" />
+        <span asp-validation-for="HealthcareProviderId" class="text-danger"></span>
+    </div>
+
+    <input type="submit" value="Create" class="btn btn-outline-success float-right" asp-action="Create" />
+</form>
