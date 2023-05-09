@@ -1,5 +1,7 @@
 using MedCare_Hospital.Data;
 using MedCare_Hospital.DataStructure;
+using MedCare_Hospital.Services;
+using MedCare_Hospital.Services.IServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +19,9 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultUI().AddDefaultTokenProviders();
 builder.Services.AddControllersWithViews();
+
+//Service configurations
+builder.Services.AddScoped<IFileService, FileService>();
 
 var app = builder.Build();
 
@@ -43,5 +48,10 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+using (var scope = app.Services.CreateScope())
+{
+    await DbSeeder.SeedRolesAndAdminAsync(scope.ServiceProvider);
+}
 
 app.Run();

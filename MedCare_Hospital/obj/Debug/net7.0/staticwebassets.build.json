@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iOR1UW/WBKZSFp+0eQEEkLk81cZcUEjNNSCt0fOmKBA=",
+  "Hash": "ea2pjJ6BQ3Nzgx30NLGmPf09T5oEXMahrQg02AD8EAo=",
   "Source": "MedCare_Hospital",
   "BasePath": "_content/MedCare_Hospital",
   "Mode": "Default",
@@ -2089,6 +2089,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\uploads\\8181402b-790e-4a5e-be00-ba493b545c53.jpg",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "uploads/8181402b-790e-4a5e-be00-ba493b545c53.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8181402b-790e-4a5e-be00-ba493b545c53.jpg"
     }
   ]
 }
