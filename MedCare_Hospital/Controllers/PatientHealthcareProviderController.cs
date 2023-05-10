@@ -48,9 +48,9 @@ namespace MyHospital_MVC.Controllers
         }
 
         [HttpPost, ActionName("Delete")]
-        public IActionResult DeleteConfirm(int healthcareProviderId, int id)
+        public IActionResult DeleteConfirm(PatientHealthcareProvider patientHealthcareProvider)
         {
-            patientHealthcareProviderService.DeletePatientHealthcareProvider(healthcareProviderId, id);
+            patientHealthcareProviderService.DeletePatientHealthcareProvider(patientHealthcareProvider.HealthcareProviderId,patientHealthcareProvider.PatientId);
             return RedirectToAction(nameof(Index));
         }
     }

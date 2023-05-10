@@ -22,7 +22,8 @@
     </dl>
 
     <div class="form-group">
-        <input type="hidden" asp-id="Id" />
+        <input asp-for="@Model.PatientId" class="d-none" value="@Model.PatientId"/>
+        <input asp-for="@Model.HealthcareProviderId" class="d-none" value="@Model.HealthcareProviderId"/>
         <input type="submit" value="Confirm" class="btn btn-outline-danger float-right" asp-action="Delete" />
         <a class="btn btn-outline-secondary" asp-action="Index">Show All Relations</a>
     </div>
