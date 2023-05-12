@@ -27,7 +27,10 @@
 <body>
 
     <h1 class="display-4">Welcome to the MedCare &#128147;</h1>
-    <a asp-controller="Appointment" asp-action="Create" class="btn btn-outline-success">Book New Appointment</a>
+    @if (User.IsInRole("Patient"))
+    {
+        <a asp-controller="Appointment" asp-action="Create" class="btn btn-outline-success">Book New Appointment</a>
+    }
     <a asp-controller="Survey" asp-action="Index" class="btn btn-outline-success">Take a Covid Survey</a>
 
     <div class="polaroid">

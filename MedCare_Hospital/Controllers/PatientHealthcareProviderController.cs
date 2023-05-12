@@ -5,7 +5,7 @@ using MyHospital_MVC.Services.IServices;
 
 namespace MyHospital_MVC.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class PatientHealthcareProviderController : Controller
     {
         private readonly IPatientHealthcareProviderService patientHealthcareProviderService;
