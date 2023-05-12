@@ -6,7 +6,7 @@ using MyHospital_MVC.Services.IServices;
 
 namespace MyHospital_MVC.Services
 {
-    public class MedicalRecordService:IMedicalRecordService
+    public class MedicalRecordService : IMedicalRecordService
     {
         private readonly IMedicalRecordRepository medicalRecordRepository;
 
@@ -42,8 +42,7 @@ namespace MyHospital_MVC.Services
 
         public MedicalRecord GetMedicalRecordByPatientName(string name)
         {
-            return medicalRecordRepository.GetMedicalRecordByPatientName(name)
-                .FirstOrDefault();
+            return medicalRecordRepository.GetMedicalRecordByPatientName(name);
         }
     }
 }

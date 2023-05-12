@@ -36,7 +36,7 @@ namespace MyHospital_MVC.Controllers
             return Ok(medicalRecord);
         }
 
-        [HttpGet]
+        [HttpGet,ActionName("GetName")]
         public IActionResult GetMedicalRecordByPatientName(string name)
 
         {
@@ -47,7 +47,7 @@ namespace MyHospital_MVC.Controllers
                 return NotFound();
             }
 
-            return Ok(medicalRecord);
+            return View(medicalRecord);
         }
 
         public IActionResult Details(int id)

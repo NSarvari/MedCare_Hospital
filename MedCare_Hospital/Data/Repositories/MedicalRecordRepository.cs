@@ -1,4 +1,6 @@
 ﻿using MedCare_Hospital.Data;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 using MyHospital_MVC.DataAccess;
 using MyHospital_MVC.DataAccess.Repositories.IRepositories;
 using MyHospital_MVC.Models;
@@ -24,9 +26,17 @@ namespace MyHospital.DataAccess.Repositories
         }
 
         //Get MedicalRecord By patientName
-        public List<MedicalRecord> GetMedicalRecordByPatientName(string name)
+        public MedicalRecord GetMedicalRecordByPatientName(string name)
         {
-            return this._appDbContext.MedicalRecords.Where(mr => mr.Patient.Name == name).ToList();
+            // Get the patient by name
+            var patient = _appDbContext.Patients.FirstOrDefault(p => p.Name ==  name);
+
+            if (patient != null)
+            {
+                // Get the medical record of the patient
+                var medicalRecord = _appDbContext.MedicalRecords.FirstOrDefault(mr => mr.PatientId == patient.PatientId);
+            }
+            return _appDbContext.MedicalRecords.FirstOrDefault();
         }
 
         public void AddMedicalRecord(MedicalRecord medicalRecord)

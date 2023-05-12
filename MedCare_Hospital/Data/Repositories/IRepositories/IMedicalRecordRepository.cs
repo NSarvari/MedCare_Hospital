@@ -9,6 +9,6 @@ namespace MyHospital_MVC.DataAccess.Repositories.IRepositories
         void DeleteMedicalRecord(int id);
         MedicalRecord GetMedicalRecordById(int id);
         List<MedicalRecord> GetAllMedicalRecords();
-        List<MedicalRecord> GetMedicalRecordByPatientName(string name);
+        MedicalRecord GetMedicalRecordByPatientName(string name);
     }
 }

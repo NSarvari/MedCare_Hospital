@@ -7,7 +7,7 @@ namespace MyHospital_MVC.Models
         [Key]
         public int AppointmentId { get; set; }
         [Required]
-        public string AppointmentDate { get; set; }
+        public DateTime Date { get; set; }
         [Required]
         public string Reason { get; set; }
 

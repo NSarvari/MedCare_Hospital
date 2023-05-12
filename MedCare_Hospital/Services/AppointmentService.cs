@@ -5,7 +5,7 @@ using MyHospital_MVC.Services.IServices;
 
 namespace MyHospital_MVC.Services
 {
-    public class AppointmentService:IAppointmentService
+    public class AppointmentService : IAppointmentService
     {
         private readonly IAppointmentRepository appointmentRepository;
 
@@ -48,6 +48,5 @@ namespace MyHospital_MVC.Services
         {
             return appointmentRepository.GetAllAppointments();
         }
-
     }
 }

@@ -12,6 +12,7 @@ using MyHospital.DataAccess.Repositories.IRepositories;
 using MyHospital.DataAccess.Repositories;
 using MyHospital_MVC.DataAccess.Repositories.IRepositories;
 using MyHospital_MVC.DataAccess.Repositories;
+using MyHospital.DataAccess.Repositories.MyHospital_MVC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 

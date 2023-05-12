@@ -1,0 +1,85 @@
+﻿@model Survey
+
+<h1>COVID Survey</h1>
+
+<form asp-action="Index" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TraveledOutsideCountry"></label>
+        <select asp-for="TraveledOutsideCountry" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <span asp-validation-for="TraveledOutsideCountry" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ContactWithCovid">Have you come into contact with anyone who has tested positive for COVID-19?</label>
+        <select asp-for="ContactWithCovid" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <span asp-validation-for="ContactWithCovid" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HasSymptoms">Are you experiencing any of the following symptoms?</label>
+        <div>
+
+            Cough<br />
+            Shortness of breath<br />
+            Fever<br />
+            Fatigue<br />
+            Muscle or body aches<br />
+            Headache<br />
+            Loss of taste or smell<br />
+            Sore throat<br />
+        </div>
+        <input asp-for="HasSymptoms" class="form-control" />
+
+        <span asp-validation-for="HasSymptoms" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TestedPositive">Have you tested positive for COVID-19 in the last 14 days?</label>
+        <select asp-for="TestedPositive" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <span asp-validation-for="TestedPositive" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReceivedVaccine">Have you received a COVID-19 vaccine?</label>
+        <select asp-for="ReceivedVaccine" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <span asp-validation-for="ReceivedVaccine" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ParticipateInContactTracing">Are you willing to participate in contact tracing if needed?</label>
+        <select asp-for="ParticipateInContactTracing" class="form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <span asp-validation-for="ParticipateInContactTracing" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Comments"> Do you have any additional comments or concerns?</label>
+        <input asp-for="Comments" class="form-control" />
+        <span asp-validation-for="Comments" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
