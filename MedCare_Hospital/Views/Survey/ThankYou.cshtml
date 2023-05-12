@@ -1,2 +1,9 @@
-﻿<p>Thank you</p>
+﻿@model Survey
+
+@{
+    ViewData["Title"] = "Thank You";
+}
+
+<h1>Thank You for Completing the COVID Survey</h1>
 <p>The survey is verified by Dr.Ahmad Khusraw Faiqzada</p>
+<p>Thank you, @Model.Name, for completing the COVID survey. Your responses have been recorded.</p>
