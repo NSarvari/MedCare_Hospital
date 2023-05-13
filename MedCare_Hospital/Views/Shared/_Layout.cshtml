@@ -24,18 +24,25 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Patient" asp-action="Index">Patients</a>
-                            </li>
+                            if (User.IsInRole("HealthcareProvider") && User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Patient" asp-action="Index">Patients</a>
+                                </li>
+                            }
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="MedicalRecord" asp-action="Index">Medical Records</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Appointment" asp-action="Index">Appointments</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="HealthcareProvider" asp-action="Index">Healthcare Providers</a>
-                            </li>
+                            @if (User.IsInRole("Patient"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="HealthcareProvider" asp-action="Index">Healthcare Providers</a>
+                                </li>
+                            }
+
                             if (User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">

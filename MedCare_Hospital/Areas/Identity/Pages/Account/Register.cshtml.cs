@@ -101,6 +101,9 @@ namespace MedCare_Hospital.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Role")]
+            public string Role { get; set; }
         }
 
 
@@ -124,8 +127,14 @@ namespace MedCare_Hospital.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user,Roles.Patient.ToString());
-                    await _userManager.AddToRoleAsync(user, Roles.HealthcareProvider.ToString());
+                    if (Input.Role == "Patient")
+                    {
+                        await _userManager.AddToRoleAsync(user, Roles.Patient.ToString());
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, Roles.HealthcareProvider.ToString());
+                    }
 
                     _logger.LogInformation("User created a new account with password.");
 
