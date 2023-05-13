@@ -24,7 +24,7 @@
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         {
-                            if (User.IsInRole("HealthcareProvider") && User.IsInRole("Admin"))
+                            if (User.IsInRole("HealthcareProvider") || User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="Patient" asp-action="Index">Patients</a>

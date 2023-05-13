@@ -6,40 +6,196 @@
 <html>
 <head>
     <style>
-        div.polaroid {
-            width: 800px;
-            height: 530px;
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            margin-bottom: 25px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+        body {
+            overflow: hidden;
         }
 
-        div.container {
-            font-size: 24px;
+        .bg-image {
+            background-size: cover;
+            background-image: url('https://imageio.forbes.com/specials-images/imageserve/638ee3f77ab30981d50d997c/The-Top-5-Healthcare-Trends-In-2023/960x0.jpg?format=jpg&width=960');
+            background-repeat: no-repeat;
+            height: 600px;
+            width: 1650px;
+            margin-top:-15px;
+            margin-left: -110px;
+        }
+
+        .welcome {
+            font-family: Algerian;
             text-align: center;
-            padding: 10px 20px;
+            padding-top: 80px;
+        }
+
+        #top-main {
+            padding-left: 80px;
+            padding-top: 100px;
+            padding-bottom: 3000px;
+        }
+
+            #top-main p {
+                font-family: 'Bookman Old Style';
+                font-size: 16px;
+                color: #000;
+                font-weight: 800;
+            }
+
+            #top-main h2::after {
+                content: "";
+                background: red;
+                height: 4px;
+                width: 120px;
+                display: block;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                margin-left: 70px
+            }
+
+            #top-main h2 {
+                font-family:Century;
+                font-size: 36px;
+                color: #000;
+            }
+
+                #top-main h2 span {
+                    color: red;
+                }
+
+            #top-main button {
+                background-color: red;
+                color: #fff;
+                border-radius: 10px;
+                border-color: transparent;
+                width: 154px;
+                height: 44.14px;
+            }
+
+        #hospital-action {
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        #hospital-action .item img {
+            position: absolute;
+            margin-left:-60px;
+            width: 48px;
+        }
+
+        #hospital-action .item {
+            text-decoration: none;
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+            #hospital-action .item span {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                text-decoration: none;
+                color: black;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+
+            #hospital-action .item p {
+                text-decoration: none;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                color: black;
+                font-size: 15px;
+            }
+
+        #hospital-action h2 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            color: black;
+            text-transform: uppercase;
+            padding-left: 65px;
+            margin-bottom: 45px;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-
-    <h1 class="display-4">Welcome to the MedCare &#128147;</h1>
-    @if (User.IsInRole("Patient"))
-    {
-        <a asp-controller="Appointment" asp-action="Create" class="btn btn-outline-success">Book New Appointment</a>
-    }
-    <a asp-controller="Survey" asp-action="Index" class="btn btn-outline-success">Take a Covid Survey</a>
-
-    <div class="polaroid">
-        <img src="https://qtxasset.com/quartz/qcloud5/media/image/Hospital%20surgery%20corridor.jpg?VersionId=IM4x7S3zWBkG5zoK9lB7J.gfM6ktY2wD" alt="5 Terre" style="width:100%">
+    <div class="bg-image">
+        <h1 class="display-4 welcome">Welcome to the MedCare &#128147;</h1>
         <div class="container">
-            <p><strong>Let us take care of your health!</strong></p>
+            <div class="row" id="top-main">
+                <div class="col-md-7 col-lg-6 col-xl-4 box-content">
+                    <h2>We do our best to keep you <span>Healthy</span></h2>
+                    <p>
+                        Our Doctors are the best in the country and we use the newest technology for your health
+                    </p>
+                    <button>
+                        Read More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                       fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    <section id="hospital-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 left-col">
+                    <h2>Healthcare Service</h2>
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Cardeology</span>
+                        <p>All kind of hearth treatments and surguries</p>
+                    </a>
 
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Nevrology</span>
+                        <p>All kind of brain treatments and surguries</p>
+                    </a>
+
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Genecology</span>
+                        <p>All kind of gyno treatments</p>
+                    </a>
+
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Endocinology</span>
+                        <p>All kind of hormonal treatments</p>
+                    </a>
+                </div>
+
+                <div class="right-col col-md-6">
+                    <h2>Beauty club</h2>
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Dermatology</span>
+                        <p>All Skin treatments</p>
+                    </a>
+
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Alergilogy</span>
+                        <p>All kind of allergy treatments</p>
+                    </a>
+
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Gastroentrology</span>
+                        <p>All kind of stomach problem treatments</p>
+                    </a>
+
+                    <a href="#" class="item">
+                        <img src="https://www.vhv.rs/dpng/d/430-4305192_heart-pulse-health-medical-heart-health-icon-png.png" alt="">
+                        <span>Eye Specialized</span>
+                        <p>All kind of Eye treatments</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
 
