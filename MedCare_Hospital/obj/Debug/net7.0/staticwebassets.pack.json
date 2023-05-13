@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\uploads\\8181402b-790e-4a5e-be00-ba493b545c53.jpg"
     },
     {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\uploads\\heartSymbol.png",
+      "PackagePath": "staticwebassets\\uploads\\heartSymbol.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MedCare_Hospital.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
