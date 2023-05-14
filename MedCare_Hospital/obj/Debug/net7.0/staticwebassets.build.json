@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uoTT5oQWpHE+zFkL3Pq7CiybZxWpL03g5+HWbGpS7HE=",
+  "Hash": "l8FlwdHUAchG3+a3/GtJqcwrpnUW2NqjewgPXziNRuY=",
   "Source": "MedCare_Hospital",
   "BasePath": "_content/MedCare_Hospital",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MedCare_Hospital.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Index.css",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "css/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
       "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\site.css",
