@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iEt8J+eWo2yap0tcYosyHqA0/uVwxelDGndNgtcQMlo=",
+  "Hash": "uoTT5oQWpHE+zFkL3Pq7CiybZxWpL03g5+HWbGpS7HE=",
   "Source": "MedCare_Hospital",
   "BasePath": "_content/MedCare_Hospital",
   "Mode": "Default",
@@ -2123,6 +2123,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\heartSymbol.png"
+    },
+    {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\uploads\\Main_bg_img.png",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "uploads/Main_bg_img.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\Main_bg_img.png"
     }
   ]
 }
