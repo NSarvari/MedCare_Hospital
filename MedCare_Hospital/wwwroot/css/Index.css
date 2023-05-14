@@ -28,6 +28,7 @@
     #top-main p {
         font-family: 'Bookman Old Style';
         font-size: 16px;
+        text-align: justify;
         color: #000;
         font-weight: 800;
     }
@@ -64,7 +65,37 @@
         height: 44.14px;
     }
 
+#survey {
+    margin-top: 30px;
+    padding-left: 150px;
+    margin-left: -100px;
+    margin-bottom: 30px;
+}
 
+    #survey h3 {
+        font-family: 'Berlin Sans FB';
+        font-weight: 100;
+        color: #000;
+    }
+
+        #survey h3 strong {
+            font-weight: 500;
+        }
+
+    #survey p {
+        font-family: 'Times New Roman';
+        font-weight: 300;
+        text-align:justify;
+        color: #000;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    #survey .right-image {
+        width: 900px;
+        height: 368px;
+        border-radius:10px;
+    }
 
 #hospital-action {
     background-image: url('https://slidescorner.com/wp-content/uploads/2022/10/01-Medical-Blue-Heart-Beat-Abstract-Lines-free-PPT-Background-by-SlidesCorner-.jpg');
@@ -158,6 +189,7 @@
 
     #about p {
         font-family: 'Times New Roman';
+        text-align: justify;
         font-weight: 300;
         color: #000;
         font-size: 18px;
@@ -200,7 +232,7 @@
 
 .footer-clean {
     padding: 50px 0;
-    padding-left:100px;
+    padding-left: 100px;
     background-color: #0097a7;
     color: #fff;
     width: 1600px;
