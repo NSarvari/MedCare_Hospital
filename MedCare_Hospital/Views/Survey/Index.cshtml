@@ -1,85 +1,139 @@
 ﻿@model Survey
 
-<h1>COVID Survey</h1>
+<html>
+<head>
+    <style>
+        body {
+            background-color:#e8f6f3;
+        }
 
-<form asp-action="Index" method="post">
-    <div class="form-group">
-        <label asp-for="Name"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
-    </div>
+        .survey-heading {
+            font-family: Algerian;
+            font-size: 50px;
+        }
 
-    <div class="form-group">
-        <label asp-for="Age"></label>
-        <input asp-for="Age" class="form-control" />
-        <span asp-validation-for="Age" class="text-danger"></span>
-    </div>
+        input[type=text], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #0097a7;
+            border-radius: 4px;
+        }
 
-    <div class="form-group">
-        <label asp-for="TraveledOutsideCountry"></label>
-        <select asp-for="TraveledOutsideCountry" class="form-control">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <span asp-validation-for="TraveledOutsideCountry" class="text-danger"></span>
-    </div>
+        .question {
+            margin-bottom: 25px;
+        }
 
-    <div class="form-group">
-        <label asp-for="ContactWithCovid">Have you come into contact with anyone who has tested positive for COVID-19?</label>
-        <select asp-for="ContactWithCovid" class="form-control">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <span asp-validation-for="ContactWithCovid" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="HasSymptoms">Are you experiencing any of the following symptoms?</label>
-        <div>
+        #select {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 4px;
+            border: 2px solid #0097a7;
+        }
 
-            Cough<br />
-            Shortness of breath<br />
-            Fever<br />
-            Fatigue<br />
-            Muscle or body aches<br />
-            Headache<br />
-            Loss of taste or smell<br />
-            Sore throat<br />
+        .form-context {
+            font-family: 'Goudy Old Style';
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .btn-submit {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: #0097a7;
+            color: #fff;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="survey-heading">COVID-19 Health Survey &#128394;</h1>
+
+    <form asp-action="Index" method="post" class="form-context">
+        <div class="form-group question">
+            <label asp-for="Name">What is your Name?</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
-        <input asp-for="HasSymptoms" class="form-control" />
 
-        <span asp-validation-for="HasSymptoms" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="TestedPositive">Have you tested positive for COVID-19 in the last 14 days?</label>
-        <select asp-for="TestedPositive" class="form-control">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <span asp-validation-for="TestedPositive" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ReceivedVaccine">Have you received a COVID-19 vaccine?</label>
-        <select asp-for="ReceivedVaccine" class="form-control">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <span asp-validation-for="ReceivedVaccine" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="ParticipateInContactTracing">Are you willing to participate in contact tracing if needed?</label>
-        <select asp-for="ParticipateInContactTracing" class="form-control">
-            <option value="true">Yes</option>
-            <option value="false">No</option>
-        </select>
-        <span asp-validation-for="ParticipateInContactTracing" class="text-danger"></span>
-    </div>
+        <div class="form-group question">
+            <label asp-for="Age">How old are you?</label>
+            <input asp-for="Age" class="form-control" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label asp-for="Comments"> Do you have any additional comments or concerns?</label>
-        <input asp-for="Comments" class="form-control" />
-        <span asp-validation-for="Comments" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</form>
+        <div class="form-group question">
+            <label asp-for="TraveledOutsideCountry"></label>
+            <select asp-for="TraveledOutsideCountry" class="form-control" id="select">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="TraveledOutsideCountry" class="text-danger"></span>
+        </div>
+
+        <div class="form-group question">
+            <label asp-for="ContactWithCovid">Have you come into contact with anyone who has tested positive for COVID-19?</label>
+            <select asp-for="ContactWithCovid" class="form-control" id="select">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="ContactWithCovid" class="text-danger"></span>
+        </div>
+        <div class="form-group question">
+            <label asp-for="HasSymptoms">Are you experiencing any of the following symptoms?</label>
+            <div>
+                <ul>
+                    <li>Cough</li>
+                    <li>Shortness of breath</li>
+                    <li>Fever</li>
+                    <li>Fatigue</li>
+                    <li>Muscle or body aches</li>
+                    <li>Headache</li>
+                    <li>Loss of taste or smell</li>
+                    <li>Sore throat</li>
+                </ul>
+            </div>
+            <input asp-for="HasSymptoms" class="form-control" />
+
+            <span asp-validation-for="HasSymptoms" class="text-danger"></span>
+        </div>
+        <div class="form-group question">
+            <label asp-for="TestedPositive">Have you tested positive for COVID-19 in the last 14 days?</label>
+            <select asp-for="TestedPositive" class="form-control" id="select">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="TestedPositive" class="text-danger"></span>
+        </div>
+        <div class="form-group question">
+            <label asp-for="ReceivedVaccine">Have you received a COVID-19 vaccine?</label>
+            <select asp-for="ReceivedVaccine" class="form-control" id="select">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="ReceivedVaccine" class="text-danger"></span>
+        </div>
+        <div class="form-group question">
+            <label asp-for="ParticipateInContactTracing">Are you willing to participate in contact tracing if needed?</label>
+            <select asp-for="ParticipateInContactTracing" class="form-control" id="select">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="ParticipateInContactTracing" class="text-danger"></span>
+        </div>
+
+        <div class="form-group question">
+            <label asp-for="Comments"> Do you have any additional comments or concerns?</label>
+            <textarea asp-for="Comments" placeholder="Write something.." style="height:200px"></textarea>
+            <span asp-validation-for="Comments" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-submit">Submit</button>
+        </div>
+    </form>
+
+</body>
+</html>
