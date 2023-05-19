@@ -11,9 +11,9 @@
             background-color: #e8f6f3;
         }
 
-        .heading{
-            font-family:'Century Schoolbook';
-            margin-bottom:30px;
+        .heading {
+            font-family: 'Century Schoolbook';
+            margin-bottom: 40px;
         }
 
         input[type=text], textarea {
@@ -34,7 +34,7 @@
             padding-right: 50px;
         }
 
-        .btn-index{
+        .btn-index {
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
             background-color: #fff;
@@ -43,46 +43,53 @@
             padding-left: 50px;
             padding-right: 50px;
         }
+        div .doctor-img{
+            border: 4px solid #0097a7;
+            border-radius: 5px;
+            padding: 5px;
+            width: 450px;
+            margin-right:100px;
+            margin-left:50px;
+        }
     </style>
 </head>
 <body>
-    <h1 class="heading">Edit Healthcare Provider</h1>
+    <h1 class="heading text-center">Edit Healthcare Provider</h1>
 
     <div class="row text">
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col-md-8 ">
-                    <form asp-action="Update">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <img class="rounded-circle" src="@Url.Content(Model.Photo)" alt="@Model.Name" style="max-width:150px; float:left; margin-right:2000px" />
-                        <div class="form-group">
-                            <label asp-for="Photo" class="control-label"></label>
-                            <input asp-for="Photo" class="form-control" />
-                            <span asp-validation-for="Photo" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Name" class="control-label"></label>
-                            <input asp-for="Name" class="form-control" />
-                            <span asp-validation-for="Name" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Speciality" class="control-label"></label>
-                            <input asp-for="Speciality" class="form-control" />
-                            <span asp-validation-for="Speciality" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Contact" class="control-label"></label>
-                            <input asp-for="Contact" class="form-control" />
-                            <span asp-validation-for="Contact" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <input asp-for="@Model.HealthcareProviderId" class="d-none" value="@Model.HealthcareProviderId" />
-                            <input type="submit" value="Update" class="btn btn-update float-right" asp-action="Update" />
-                            <a class="btn btn-index" asp-action="Index">Show All Healthcare Providers</a>
-                        </div>
-                    </form>
-
-                </div>
+        <div class="row">
+            <div class="col-md-6 doctor-img">
+                <img src="@Url.Content(Model.Photo)" alt="@Model.Name" class="img-fluid right-image">
+            </div>
+            <div class="col-md-6">
+                <form asp-action="Update">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Photo" class="control-label"></label>
+                        <input asp-for="Photo" class="form-control" />
+                        <span asp-validation-for="Photo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Speciality" class="control-label"></label>
+                        <input asp-for="Speciality" class="form-control" />
+                        <span asp-validation-for="Speciality" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Contact" class="control-label"></label>
+                        <input asp-for="Contact" class="form-control" />
+                        <span asp-validation-for="Contact" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="@Model.HealthcareProviderId" class="d-none" value="@Model.HealthcareProviderId" />
+                        <input type="submit" value="Update" class="btn btn-update float-right" asp-action="Update" />
+                        <a class="btn btn-index" asp-action="Index">Show All Healthcare Providers</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
