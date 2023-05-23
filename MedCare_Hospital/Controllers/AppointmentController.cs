@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MedCare_Hospital.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MyHospital_MVC.Models;
 using MyHospital_MVC.Services.IServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MyHospital_MVC.Controllers
 {
@@ -9,10 +11,13 @@ namespace MyHospital_MVC.Controllers
     public class AppointmentController : Controller
     {
         private readonly IAppointmentService appointmentService;
+        private readonly ApplicationDbContext _appDbContext;
 
-        public AppointmentController(IAppointmentService appointmentService)
+
+        public AppointmentController(IAppointmentService appointmentService, ApplicationDbContext aapDbContext)
         {
             this.appointmentService = appointmentService;
+            this._appDbContext = aapDbContext;
         }
 
         [HttpGet]
@@ -83,8 +88,16 @@ namespace MyHospital_MVC.Controllers
         [HttpPost]
         public IActionResult Create(Appointment appointment)
         {
-            appointmentService.AddAppointment(appointment);
+            //appointment = _appDbContext.Appointments.Where(x => x.Date == date).FirstOrDefault();
 
+            //if (appointment != null)
+            //{
+            //    return RedirectToAction(nameof(Index));
+            //}
+            //else
+            //{
+            //}
+            appointmentService.AddAppointment(appointment);
             return RedirectToAction(nameof(Index));
         }
 

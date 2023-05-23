@@ -1,4 +1,5 @@
 ﻿using MedCare_Hospital.Data;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using MyHospital_MVC.DataAccess.Repositories.IRepositories;
 using MyHospital_MVC.Models;
 using System;
@@ -39,8 +40,10 @@ namespace MyHospital.DataAccess.Repositories
 
             public void AddAppointment(Appointment appointment)
             {
-                _appDbContext.Appointments.Add(appointment);
-                _appDbContext.SaveChanges();
+
+                    _appDbContext.Appointments.Add(appointment);
+                    _appDbContext.SaveChanges();
+                
             }
 
             public void UpdateAppointment(Appointment appointment)

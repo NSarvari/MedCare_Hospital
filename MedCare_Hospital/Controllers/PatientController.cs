@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using MedCare_Hospital.Data;
+using MedCare_Hospital.Data.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyHospital.Services.IServices;
 using MyHospital_MVC.Models;
 
@@ -9,10 +12,12 @@ namespace MyHospital.Controllers
     public class PatientController : Controller
     {
         private readonly IPatientService patientService;
+        private readonly ApplicationDbContext context;
 
-        public PatientController(IPatientService patientService)
+        public PatientController(IPatientService patientService, ApplicationDbContext context)
         {
             this.patientService = patientService;
+            this.context = context;
         }
 
         [HttpGet]
@@ -52,13 +57,33 @@ namespace MyHospital.Controllers
 
         public IActionResult Details(int id)
         {
-            var patientDetials = patientService.GetPatientById(id);
+            //var patientDetials = patientService.GetPatientById(id);
 
-            if (patientDetials == null)
+            //if (patientDetials == null)
+            //{
+            //    return View("NotFound");
+            //}
+            //return View(patientDetials);
+            // Retrieve the patient from the database
+            var patient = context.Patients.Find(id);
+
+            if (patient == null)
             {
-                return View("NotFound");
+                // Handle the case where the patient is not found
+                return NotFound();
             }
-            return View(patientDetials);
+
+            // Retrieve the medical record associated with the patient
+            var medicalRecord = context.MedicalRecords.FirstOrDefault(mr => mr.PatientId == id);
+
+            // Create the view model and populate it with the patient and medical record
+            var viewModel = new PatientMedicalRecord
+            {
+                Patient = patient,
+                MedicalRecord = medicalRecord
+            };
+
+            return View(viewModel);
         }
 
         public IActionResult Create()
