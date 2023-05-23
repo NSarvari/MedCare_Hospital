@@ -1,37 +1,200 @@
 ﻿@model IEnumerable<MyHospital_MVC.Models.Patient>
 <!DOCTYPE html>
-<h1>Patients</h1>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?w=360');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
 
+        .responsive-cell-block {
+            min-height: 95px;
+        }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Contact</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+        .text-blk {
+            font-family:'Times New Roman';
+            font-size:18px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+            line-height: 25px;
+        }
+
+        .responsive-container-block {
+            min-height: 95px;
+            height: fit-content;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 0px;
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            justify-content: space-evenly;
+        }
+
+        .team-head-text {
+            font-family: 'Felix Titling';
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+        }
+
+        .team-head-text {
+            line-height: 50px;
+            width: 100%;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 50px;
+            margin-left: 0px;
+        }
+
+        .container {
+            max-width: 1380px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 0px;
+            padding-right: 30px;
+            padding-bottom: 0px;
+            padding-left: 30px;
+        }
+
+        .card {
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            padding-right: 25px;
+            padding-bottom: 0px;
+            padding-left: 25px;
+            height: 280px;
+        }
+
+        .card-container {
+            width: 280px;
+            margin-top: 0px;
+            margin-right: 10px;
+            margin-bottom: 25px;
+            margin-left: 10px;
+        }
+
+        .name {
+            font-weight: 800;
+            margin-bottom:10px;
+        }
+        .detail-button {
+            background-color: gray;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .delete-button {
+            background-color: red;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .btn-create {
+            background-color: #0097a7;
+            border: 2px solid #fff;
+            color: #fff;
+            font-family: 'Arial Rounded MT';
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+            .btn-create:hover {
+                border: 2px solid black;
+                background-color: white;
+                color: #0097a7;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="responsive-container-block">
+        <p class="text-blk team-head-text">
+            Patients List
+        </p>
         @foreach (var patient in Model)
         {
-            <tr>
-                <td>@patient.PatientId</td>
-                <td>@patient.Name</td>
-                <td>@patient.Age</td>
-                <td>@patient.Gender</td>
-                <td>@patient.Contact</td>
-                <td class="align-middle">
-                    <a class="btn btn-outline-secondary" asp-action="Details" asp-route-id="@patient.PatientId">
-                        <i class="bi bi-pencil-square"></i>Details
+            <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                <div class="card">
+                    <p class="text-blk name">
+                        @Html.DisplayFor(modelItem => patient.Name)
+                    </p>
+                    <p class="text-blk">
+                        @Html.DisplayFor(modelItem => patient.Age) Years Old
+                    </p>
+                    <p class="text-blk">
+                        @Html.DisplayFor(modelItem => patient.DateOfBirth)
+
+                    </p>
+                    <p class="text-blk feature-text">
+                        @Html.DisplayFor(modelItem => patient.Contact)
+
+                    </p>
+                    <div class="w3-show-inline-block">
+                        <div class="w3-bar">
+                            <a class="btn edit-button" asp-action="Update" asp-route-id="@patient.PatientId"><i class="bi bi-pencil-square"></i>Edit</a>
+                            <a class="btn delete-button" asp-action="Delete" asp-route-id="@patient.PatientId"><i class="bi bi-trash"></i>Delete</a>
+                        </div>
+                    </div>
+                    <a class="btn detail-button" asp-action="Details" asp-route-id="@patient.PatientId">
+                        <i class="bi bi-pencil-square"></i>Medical Record
                     </a>
-                    <a class="btn btn-outline-primary" asp-action="Update" asp-route-id="@patient.PatientId"><i class="bi bi-pencil-square"></i>Edit</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@patient.PatientId"><i class="bi bi-trash"></i>Delete</a>
-                </td>
-            </tr>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
-<a asp-controller="Patient" asp-action="Create" class="btn btn-outline-success">Add New Patient</a>
+    </div>
+    <div>
+        <a asp-controller="Patient" asp-action="Create" class="btn btn-create">Add New Patient</a>
+    </div>
+
+</body>
+</html>
