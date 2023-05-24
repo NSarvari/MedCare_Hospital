@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l8FlwdHUAchG3+a3/GtJqcwrpnUW2NqjewgPXziNRuY=",
+  "Hash": "OqzDxGi/K+iiR0qfnk1KAuVy8omEo/fpRskiw6ugqbs=",
   "Source": "MedCare_Hospital",
   "BasePath": "_content/MedCare_Hospital",
   "Mode": "Default",
@@ -2123,6 +2123,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\8181402b-790e-4a5e-be00-ba493b545c53.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\uploads\\9f2f687a-d332-4fe1-a753-00443096230f.jpg",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "uploads/9f2f687a-d332-4fe1-a753-00443096230f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9f2f687a-d332-4fe1-a753-00443096230f.jpg"
     },
     {
       "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\uploads\\heartSymbol.png",

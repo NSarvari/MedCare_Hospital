@@ -1,27 +1,66 @@
 ﻿@model MyHospital_MVC.Models.Appointment
 
-<h2>Create Appointment</h2>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #e8f6f3;
+        }
 
-<form asp-action="Create">
-    <div class="form-group">
-        <label asp-for="Date">Appointment Date</label>
-        <input asp-for="Date" class="form-control" />
-        <span asp-validation-for="Date" class="text-danger"></span>
+        .heading {
+            font-family: 'Century Schoolbook';
+            margin-bottom: 40px;
+        }
+
+        input[type=text], [type=number], [type=datetime-local] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            box-sizing: border-box;
+            border: 2px solid #0097a7;
+            border-radius: 4px;
+        }
+
+        .btn-create {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: #0097a7;
+            color: #fff;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="heading">Create Appointment</h2>
+    <div class="row text">
+        <div class="row">
+            <div class="col-md-6">
+                <form asp-action="Create">
+                    <div class="form-group">
+                        <label asp-for="Date">Appointment Date</label>
+                        <input asp-for="Date" class="form-control" />
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Reason">Reason</label>
+                        <input asp-for="Reason" class="form-control" />
+                        <span asp-validation-for="Reason" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PatientId">Patient Id</label>
+                        <input asp-for="PatientId" class="form-control" />
+                        <span asp-validation-for="PatientId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="HealthcareProviderId">Healthcare Provider Id</label>
+                        <input asp-for="HealthcareProviderId" class="form-control" />
+                        <span asp-validation-for="HealthcareProviderId" class="text-danger"></span>
+                    </div>
+                    <input type="submit" value="Create" class="btn btn-create float-right" asp-action="Create" />
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Reason">Reason</label>
-        <input asp-for="Reason" class="form-control" />
-        <span asp-validation-for="Reason" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="PatientId">Patient Id</label>
-        <input asp-for="PatientId" class="form-control" />
-        <span asp-validation-for="PatientId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="HealthcareProviderId">Healthcare Provider Id</label>
-        <input asp-for="HealthcareProviderId" class="form-control" />
-        <span asp-validation-for="HealthcareProviderId" class="text-danger"></span>
-    </div>
-    <input type="submit" value="Create" class="btn btn-outline-success float-right" asp-action="Create" />
-</form>
+</body>
+</html>

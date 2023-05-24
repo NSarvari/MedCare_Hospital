@@ -1,33 +1,128 @@
 ﻿@model IEnumerable<MyHospital_MVC.Models.Appointment>
 <!DOCTYPE html>
-<h1>Appointments</h1>
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Appointment Date</th>
-            <th>Reason</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var appointment in Model)
-        {
-            <tr>
-                <td>@appointment.AppointmentId</td>
-                <td>@appointment.Date</td>
-                <td>@appointment.Reason</td>
-                <td class="align-middle">
-                    <a class="btn btn-outline-secondary" asp-action="Details" asp-route-id="@appointment.AppointmentId">
-                        <i class="bi bi-pencil-square"></i>Details
-                    </a>
-                    <a class="btn btn-outline-primary" asp-action="Update" asp-route-id="@appointment.AppointmentId"><i class="bi bi-pencil-square"></i>Edit</a>
-                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@appointment.AppointmentId"><i class="bi bi-trash"></i>Delete</a>
-                </td>
-            </tr>
+<html>
+    <head>
+        <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?w=360');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
-    </tbody>
-</table>
-<a asp-controller="Appointment" asp-action="Create" class="btn btn-outline-success">Add New Appointment</a>
+
+        .heading {
+            font-family: 'Times New Roman';
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .table-container {
+            background-color: #fff;
+            opacity: 75%;
+            padding: 25px 25px;
+        }
+
+        .detail-button {
+            background-color: gray;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .delete-button {
+            background-color: red;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .btn-create {
+            background-color: #0097a7;
+            border: 2px solid #fff;
+            color: #fff;
+            font-family: 'Arial Rounded MT';
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+            .btn-create:hover {
+                border: 2px solid black;
+                background-color: white;
+                color: #0097a7;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="table-container">
+    <h1 class="heading">Appointments</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Appointment Date</th>
+                <th>Reason</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var appointment in Model)
+            {
+                <tr>
+                    <td>@appointment.AppointmentId</td>
+                    <td>@appointment.Date</td>
+                    <td>@appointment.Reason</td>
+                    <td class="align-middle">
+                        <a class="btn detail-button" asp-action="Details" asp-route-id="@appointment.AppointmentId">
+                            <i class="bi bi-pencil-square"></i>Details
+                        </a>
+                        <a class="btn edit-button" asp-action="Update" asp-route-id="@appointment.AppointmentId"><i class="bi bi-pencil-square"></i>Edit</a>
+                        <a class="btn delete-button" asp-action="Delete" asp-route-id="@appointment.AppointmentId"><i class="bi bi-trash"></i>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a asp-controller="Appointment" asp-action="Create" class="btn btn-create">Add New Appointment</a>
+    </div>
+    </body>
+</html>
