@@ -1,18 +1,43 @@
 ﻿@model MyHospital_MVC.Models.HealthcareProvider
 
-<h2>Create Healthcare Provider</h2>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #e8f6f3;
+        }
 
-<div class="row text">
-    <div class="col-md-8 offset-2">
+        .heading {
+            font-family: 'Century Schoolbook';
+            margin-bottom: 40px;
+        }
 
+        input[type=text], [type=number], textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 12px 0;
+            box-sizing: border-box;
+            border: 2px solid #0097a7;
+            border-radius: 4px;
+        }
+
+        .btn-create {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-color: #0097a7;
+            color: #fff;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Create Healthcare Provider</h1>
+    <div class="row text">
         <div class="row">
-            <div class="col-md-8 offset-4">
-
+            <div class="col-md-6">
                 <form asp-action="Create">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <p>
-                        <h1>Add a New Healthcare Provider</h1>
-                    </p>
                     <div class="form-group">
                         <label asp-for="Photo" class="control-label"></label>
                         <input asp-for="Photo" class="form-control" />
@@ -34,12 +59,11 @@
                         <span asp-validation-for="Contact" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-outline-success float-right" asp-action="Create" />
-                        <a class="btn btn-outline-secondary" asp-action="Index">Show All Healthcare Providers</a>
+                        <input type="submit" value="Create" class="btn btn-create float-right" asp-action="Create" />
                     </div>
                 </form>
-
             </div>
         </div>
     </div>
-</div>
+</body>
+</html>
