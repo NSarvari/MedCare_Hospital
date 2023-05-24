@@ -15,11 +15,13 @@
             opacity: 90%;
             width: 500px;
             margin-left: 800px;
-            padding:25px 25px;
+            padding: 25px 25px;
         }
-        .heading{
-            margin-bottom:25px;
+
+        .heading {
+            margin-bottom: 25px;
         }
+
         .btn-update {
             font-family: 'Times New Roman', Times, serif;
             font-size: 20px;
@@ -38,6 +40,7 @@
             padding-left: 50px;
             padding-right: 50px;
         }
+
         .btn-create {
             background-color: #0097a7;
             border: 2px solid #fff;
@@ -67,46 +70,48 @@
         <div class="content">
             @if (Model.MedicalRecord != null)
             {
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td><strong>Name:</strong></td>
-                        <td>@Model.Patient.Name</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Diagnosis:</strong></td>
-                        <td>@Model.MedicalRecord.Diagnosis</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Treatment:</strong></td>
-                        <td>@Model.MedicalRecord.Treatment</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Medication:</strong></td>
-                        <td>@Model.MedicalRecord.Medication</td>
-                    </tr>
-                    <tr>
-                        <td><strong>LabResult:</strong></td>
-                        <td>@Model.MedicalRecord.LabResult</td>
-                    </tr>
-                    <tr>
-                        <td><strong>History:</strong></td>
-                        <td>@Model.MedicalRecord.History</td>
-                    </tr>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Name:</strong></td>
+                            <td>@Model.Patient.Name</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diagnosis:</strong></td>
+                            <td>@Model.MedicalRecord.Diagnosis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Treatment:</strong></td>
+                            <td>@Model.MedicalRecord.Treatment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Medication:</strong></td>
+                            <td>@Model.MedicalRecord.Medication</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LabResult:</strong></td>
+                            <td>@Model.MedicalRecord.LabResult</td>
+                        </tr>
+                        <tr>
+                            <td><strong>History:</strong></td>
+                            <td>@Model.MedicalRecord.History</td>
+                        </tr>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
             }
             else
             {
-            <p>There is no Medical Record saved.</p>
-            <p>Add patient's Medical Record if there is a need of it.</p>
-            <a asp-controller="MedicalRecord" asp-action="Create" class="btn btn-create">Add MedicalRecord</a>
+                <p>There is no Medical Record saved.</p>
+                <p>Add patient's Medical Record if there is a need of it.</p>
+                <a asp-controller="MedicalRecord" asp-action="Create" class="btn btn-create">Add Medical Record</a>
             }
 
         </div>
-
-        <a class="btn btn-update" asp-controller="MedicalRecord" asp-action="Update" asp-route-id="@Model.MedicalRecord.MedicalRecordId"><i class="bi bi-pencil-square"></i>Edit</a>
+        @if (Model.MedicalRecord != null)
+        {
+            <a class="btn btn-update" asp-controller="MedicalRecord" asp-action="Update" asp-route-id="@Model.MedicalRecord.MedicalRecordId"><i class="bi bi-pencil-square"></i>Edit</a>
+        }
         <a class="btn btn-index" asp-controller="Patient" asp-action="Index">Back to List</a>
 
     </div>

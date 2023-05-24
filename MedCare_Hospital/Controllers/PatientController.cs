@@ -64,6 +64,7 @@ namespace MyHospital.Controllers
             //    return View("NotFound");
             //}
             //return View(patientDetials);
+
             // Retrieve the patient from the database
             var patient = context.Patients.Find(id);
 
