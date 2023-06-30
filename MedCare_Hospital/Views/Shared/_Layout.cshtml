@@ -33,13 +33,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="MedicalRecord" asp-action="Index">Medical Records</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-controller="Appointment" asp-action="Index">Appointments</a>
-                            </li>
+                      
                             @if (User.IsInRole("Patient") || User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="HealthcareProvider" asp-action="Index">Healthcare Providers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Feedback" asp-action="Index">Feedback</a>
                                 </li>
                             }
 
@@ -50,6 +51,9 @@
                                 </li>
                             }
                         }
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Appointment" asp-action="Index">Appointments</a>
+                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

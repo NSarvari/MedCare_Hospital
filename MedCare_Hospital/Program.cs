@@ -4,14 +4,16 @@ using MedCare_Hospital.Services;
 using MedCare_Hospital.Services.IServices;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using MyHospital_MVC.DataAccess.Repositories.IRepositories;
+using MyHospital_MVC.DataAccess.Repositories;
+using MedCare_Hospital.Data.Repositories;
+using MedCare_Hospital.Data.Repositories.IRepositories;
 using MyHospital.Services.IServices;
 using MyHospital.Services;
 using MyHospital_MVC.Services.IServices;
 using MyHospital_MVC.Services;
 using MyHospital.DataAccess.Repositories.IRepositories;
 using MyHospital.DataAccess.Repositories;
-using MyHospital_MVC.DataAccess.Repositories.IRepositories;
-using MyHospital_MVC.DataAccess.Repositories;
 using MyHospital.DataAccess.Repositories.MyHospital_MVC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,6 +37,7 @@ builder.Services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IHealthcareProviderRepository, HealthcareProviderRepository>();
 builder.Services.AddScoped<IPatientHealthcareProviderRepository, PatientHealthcareProviderRepository>();
+builder.Services.AddScoped<IFeedbackRepository, FeedbackRepository>();
 
 //Service configurations
 builder.Services.AddScoped<IFileService, FileService>();
@@ -43,6 +46,7 @@ builder.Services.AddScoped<IMedicalRecordService, MedicalRecordService>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 builder.Services.AddScoped<IHealthcareProviderService, HealthcareProviderService>();
 builder.Services.AddScoped<IPatientHealthcareProviderService, PatientHealthcareProviderService>();
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
 
 var app = builder.Build();
 

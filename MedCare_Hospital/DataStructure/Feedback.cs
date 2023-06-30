@@ -9,6 +9,7 @@ namespace MyHospital_MVC.Models
         public string Text { get; set; }
 
         //Relations
+        public int PatientId { get; set; }
         public Patient Patient { get; set; }
     }
 }
