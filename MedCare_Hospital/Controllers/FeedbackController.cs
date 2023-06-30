@@ -48,18 +48,6 @@ namespace MedCare_Hospital.Controllers
             return View(feedbacks);
         }
 
-        // GET: Feedback/Details/5
-        public IActionResult Details(int id)
-        {
-            var feedback = feedbackService.GetFeedbackById(id);
-            if (feedback == null)
-            {
-                return NotFound();
-            }
-
-            return View(feedback);
-        }
-
         // GET: Feedback/Create
         public IActionResult Create()
         {
@@ -115,6 +103,12 @@ namespace MedCare_Hospital.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
+            var feedback = feedbackService.GetFeedbackById(id);
+            if (feedback == null)
+            {
+                return View("NotFound");
+            }
+
             feedbackService.DeleteFeedback(id);
             return RedirectToAction(nameof(Index));
         }
