@@ -58,7 +58,7 @@ namespace MedCare_Hospital.Data.Repositories
 
         public void UpdateFeedback(PatientFeedback patientFeedback)
         {
-            var feedback = _context.Feedbacks.FirstOrDefault(f => f.FeedbackId == patientFeedback.FeedbackId);
+            var feedback = _context.Feedbacks.FirstOrDefault(f => f.FeedbackId == patientFeedback.Feedback.FeedbackId);
 
             if (feedback != null)
             {

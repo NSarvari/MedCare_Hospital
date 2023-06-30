@@ -28,20 +28,20 @@ namespace MedCare_Hospital.Controllers
         public IActionResult Index()
         {
             var feedbacks = from feedback in _context.Feedbacks
-                                     join patient in _context.Patients on feedback.PatientId equals patient.PatientId
-                                     select new PatientFeedback
-                                     {
-                                         Feedback = new Feedback
-                                         {
-                                             FeedbackId = feedback.FeedbackId,
-                                             Text = feedback.Text
-                                         },
-                                         Patient = new Patient
-                                         {
-                                             PatientId = patient.PatientId,
-                                             Name = patient.Name
-                                         }
-                                     };
+                            join patient in _context.Patients on feedback.PatientId equals patient.PatientId
+                            select new PatientFeedback
+                            {
+                                Feedback = new Feedback
+                                {
+                                    FeedbackId = feedback.FeedbackId,
+                                    Text = feedback.Text
+                                },
+                                Patient = new Patient
+                                {
+                                    PatientId = patient.PatientId,
+                                    Name = patient.Name
+                                }
+                            };
 
 
             // return feedbackViewModels.ToList();
@@ -90,18 +90,13 @@ namespace MedCare_Hospital.Controllers
         [HttpPost]
         public IActionResult Update(int id, PatientFeedback patientFeedback)
         {
-            if (id != patientFeedback.FeedbackId)
+            if (id != patientFeedback.Feedback.FeedbackId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
-                feedbackService.UpdateFeedback(patientFeedback);
-                return RedirectToAction(nameof(Index));
-            }
-
-            return View(patientFeedback);
+            feedbackService.UpdateFeedback(patientFeedback);
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: Feedback/Delete/5
