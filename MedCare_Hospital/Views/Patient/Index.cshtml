@@ -9,6 +9,7 @@
         <p class="text-blk team-head-text">
             Patients List
         </p>
+        <input type="text" id="searchInput" placeholder="Search patient by name...">
         @foreach (var patient in Model)
         {
             <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
@@ -43,6 +44,36 @@
     <div>
         <a asp-controller="Patient" asp-action="Create" class="btn btn-create">Add New Patient</a>
     </div>
+    <script>
+        function searchPatients() {
+            // Get the search query from the input field
+            var query = document.getElementById("searchInput").value.toLowerCase();
 
+            // Get all the patient elements
+            var patients = document.getElementsByClassName("card");
+
+            // Loop through each patient element and check if the name matches the search query
+            for (var i = 0; i < patients.length; i++) {
+                var patient = patients[i];
+                var nameElement = patient.getElementsByClassName("name")[0];
+                var name = nameElement.innerText.toLowerCase();
+
+                // If the patient's name contains the search query, display it; otherwise, hide it
+                if (name.includes(query)) {
+                    patient.style.display = "block";
+                } else {
+                    patient.style.display = "none";
+                }
+            }
+        }
+
+        // Add an event listener to the search input field
+        var searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("keyup", function () {
+            // Call the searchPatients function
+            searchPatients();
+        });
+
+    </script>
 </body>
 </html>

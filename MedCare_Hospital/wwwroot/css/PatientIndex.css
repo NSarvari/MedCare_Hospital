@@ -4,6 +4,15 @@
     background-attachment: fixed;
     background-size: 100% 100%;
 }
+/* Search input */
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #0097a7;
+    border-radius: 4px;
+    font-size: 16px;
+}
 
 .responsive-cell-block {
     min-height: 95px;
