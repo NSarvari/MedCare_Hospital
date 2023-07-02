@@ -42,3 +42,24 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .content-delete {
+        width: 350px;
+        height:600px;
+        padding-left: 25px;
+        margin-left: 25px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .content-delete {
+        width: 350px;
+        padding-left: 30px;
+        margin-left: 50px;
+    }
+}

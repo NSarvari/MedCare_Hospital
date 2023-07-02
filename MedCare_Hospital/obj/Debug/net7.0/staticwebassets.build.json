@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1yAdo05DXSZFUxbAdcO0bCe0i8F/7uneXqdRkw4+ENU=",
+  "Hash": "iwC7C+jAZAuEIPWsJYs6Pf4jAD/IcAFl8wCbqstnVNI=",
   "Source": "MedCare_Hospital",
   "BasePath": "_content/MedCare_Hospital",
   "Mode": "Default",
@@ -1292,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Login.css",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "css/Login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Login.css"
+    },
+    {
       "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordCreate.css",
       "SourceId": "MedCare_Hospital",
       "SourceType": "Discovered",
@@ -1511,6 +1528,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\PHIndex.css"
+    },
+    {
+      "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Register.css",
+      "SourceId": "MedCare_Hospital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\",
+      "BasePath": "_content/MedCare_Hospital",
+      "RelativePath": "css/Register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Register.css"
     },
     {
       "Identity": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\site.css",

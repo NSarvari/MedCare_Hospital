@@ -55,3 +55,18 @@
         color: #0097a7;
         cursor: pointer;
     }
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .heading {
+        font-size: 36px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .heading {
+        font-size: 42px;
+    }
+}

@@ -85,3 +85,73 @@
         color: #0097a7;
         cursor: pointer;
     }
+
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    body {
+        background-size: cover;
+    }
+
+    .table-container {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .detail-button,
+    .delete-button,
+    .edit-button,
+    .btn-create {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .table-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .detail-button,
+    .delete-button,
+    .edit-button,
+    .btn-create {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Large screens (993px and above) */
+@media screen and (min-width: 993px) {
+    .table-container {
+        width: 70%;
+        margin: 0 auto;
+        padding: 25px;
+    }
+
+    .heading {
+        font-size: 48px;
+        margin-bottom: 25px;
+    }
+
+    .detail-button,
+    .delete-button,
+    .edit-button,
+    .btn-create {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}

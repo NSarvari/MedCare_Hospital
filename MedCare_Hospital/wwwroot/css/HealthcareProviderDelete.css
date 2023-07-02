@@ -19,6 +19,11 @@
     margin-top: 20px;
     margin-left: 100px;
 }
+.rounded-circle {
+    clip-path: circle(50% at 50% 50%);
+    width: 130px;
+    height: 130px;
+}
 
 .btn-index {
     font-size: 18px;
@@ -42,3 +47,40 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/* Media queries for different screen resolutions */
+
+/* Small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .delete-img {
+
+    }
+
+    .content-delete {
+        height: 640px;
+        width: 300px;
+        padding-left: 15px;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+}
+
+/* Medium screens (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .delete-img {
+        margin-top: 80px;
+        height:20%;
+    }
+
+    .content-delete {
+        height: 620px;
+        width: 360px;
+        padding-left: 30px;
+        margin-top: 15px;
+        margin-left: 80px;
+    }
+}
+
+/* Add additional media queries for other screen resolutions if needed */
+

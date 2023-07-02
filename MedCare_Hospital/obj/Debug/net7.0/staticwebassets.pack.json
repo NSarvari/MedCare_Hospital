@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
       "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordCreate.css",
       "PackagePath": "staticwebassets\\css\\MedicalRecordCreate.css"
     },
@@ -107,6 +111,10 @@
     {
       "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatientUpdate.css",
       "PackagePath": "staticwebassets\\css\\PatientUpdate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Register.css",
+      "PackagePath": "staticwebassets\\css\\Register.css"
     },
     {
       "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\SurveyIndex.css",

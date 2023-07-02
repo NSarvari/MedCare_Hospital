@@ -5,18 +5,83 @@
     background-size: 100% 100%;
 }
 
-.heading {
+.responsive-cell-block {
+    min-height: 95px;
+}
+
+.text-blk {
     font-family: 'Times New Roman';
+    font-size: 18px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    line-height: 25px;
+}
+
+.responsive-container-block {
+    min-height: 95px;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: space-evenly;
+}
+
+.team-head-text {
+    font-family: 'Felix Titling';
     font-size: 48px;
     font-weight: 900;
     text-align: center;
-    margin-bottom: 25px;
 }
 
-.table-container {
-    background-color: #fff;
-    opacity: 75%;
-    padding: 25px 25px;
+.team-head-text {
+    line-height: 50px;
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+}
+
+.container {
+    max-width: 1380px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+}
+
+.card {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-bottom: 0px;
+    padding-left: 25px;
+    height: 350px;
+}
+
+.card-container {
+    width: 280px;
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+
+.name {
+    font-weight: 800;
+    margin-bottom: 10px;
 }
 
 .detail-button {
@@ -85,3 +150,18 @@
         color: #0097a7;
         cursor: pointer;
     }
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .team-head-text {
+        font-size: 36px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .team-head-text {
+        font-size: 42px;
+    }
+}

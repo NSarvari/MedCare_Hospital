@@ -1,0 +1,88 @@
+﻿
+body {
+    background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v870-mynt-20_1_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=34b4a3b495378392a9320de3f3eb09ce');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.login-container {
+    background-color: #fff;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+.login-btn {
+    background-color: #0097a7;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.welcome-container {
+    font-family: Algerian;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 150px;
+    margin-top: 190px;
+    color: #0097a7;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0097a7, 0 0 82px #0097a7, 0 0 292px #fff, 0 0 102px #000, 0 0 151px #000;
+}
+
+/* Media queries for different screen resolutions */
+
+/* Small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .welcome-container {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 100px;
+    }
+
+    .login-container {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+    }
+}
+
+/* Medium screens (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .welcome-container {
+        font-size: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 150px;
+    }
+
+    .login-container {
+        margin-top: 70px;
+        margin-bottom: 25px;
+        padding-top: 8px;
+    }
+}
+
+/* Large screens (1025px and above) */
+@media screen and (min-width: 1025px) {
+    .welcome-container {
+        font-size: 50px;
+        margin-left: 100px;
+        margin-right: 150px;
+        margin-top: 190px;
+    }
+
+    .login-container {
+        margin-top: 80px;
+        margin-bottom: 30px;
+        padding-top: 10px;
+    }
+}

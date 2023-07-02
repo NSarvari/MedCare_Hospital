@@ -42,3 +42,50 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .content-delete {
+        width: 300px;
+        padding-left: 40px;
+        margin-left: 30px;
+    }
+
+    .btn-index,
+    .delete-button {
+        font-size: 16px;
+        padding: 6px 6px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .content-delete {
+        width: 400px;
+        padding-left: 50px;
+        margin-left: 50px;
+    }
+
+    .btn-index,
+    .delete-button {
+        font-size: 18px;
+        padding: 8px 8px;
+    }
+}
+
+/* Large screens (993px and above) */
+@media screen and (min-width: 993px) {
+    .content-delete {
+        width: 500px;
+        padding-left: 55px;
+        margin-left: 100px;
+    }
+
+    .btn-index,
+    .delete-button {
+        font-size: 20px;
+        padding: 8px 8px;
+    }
+}

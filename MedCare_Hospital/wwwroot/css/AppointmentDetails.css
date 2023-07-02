@@ -57,3 +57,56 @@
         color: #0097a7;
         cursor: pointer;
     }
+
+/* Media Queries */
+
+/* Small screens (up to 576px) */
+@media screen and (max-width: 576px) {
+    .container-details {
+        width: 100%;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .btn-update,
+    .btn-index,
+    .btn-create {
+        font-size: 16px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+/* Medium screens (577px - 992px) */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .container-details {
+        width: 70%;
+        margin-left: 150px;
+        padding: 20px;
+    }
+
+    .btn-update,
+    .btn-index,
+    .btn-create {
+        font-size: 18px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+/* Large screens (993px and above) */
+@media screen and (min-width: 993px) {
+    .container-details {
+        width: 500px;
+        margin-left: 800px;
+        padding: 25px 25px;
+    }
+
+    .btn-update,
+    .btn-index,
+    .btn-create {
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
