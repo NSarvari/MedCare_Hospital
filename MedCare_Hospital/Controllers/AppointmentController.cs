@@ -1,6 +1,8 @@
 ﻿using MedCare_Hospital.Data;
+using MedCare_Hospital.Data.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyHospital_MVC.Models;
 using MyHospital_MVC.Services.IServices;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -20,12 +22,19 @@ namespace MyHospital_MVC.Controllers
             this._appDbContext = aapDbContext;
         }
 
+        [Authorize(Roles="Admin,HealthcareProvider")]
         [HttpGet]
         public IActionResult Index()
         {
             var appointments = appointmentService.GetAllAppointments();
 
             return View(appointments);
+        }
+
+        [Authorize(Roles="Patient")]
+        public IActionResult ThankYou()
+        {
+            return View();
         }
 
         [HttpGet]
@@ -71,15 +80,29 @@ namespace MyHospital_MVC.Controllers
 
         public IActionResult Details(int id)
         {
-            var appointmentDetials = appointmentService.GetAppointmentById(id);
+            // Retrieve the appointment from the data source based on the provided ID
+            Appointment appointment = _appDbContext.Appointments
+                .Include(a => a.Patient)
+                .Include(a => a.HealthcareProvider)
+                .FirstOrDefault(a => a.AppointmentId == id);
 
-            if (appointmentDetials == null)
+            if (appointment == null)
             {
-                return View("NotFound");
+                return NotFound();
             }
-            return View(appointmentDetials);
+
+            // Create a new instance of the PatientAppointment view model
+            PatientAppointment patientAppointment = new PatientAppointment
+            {
+                Appointment = appointment,
+                Patient = appointment.Patient,
+                HealthcareProvider = appointment.HealthcareProvider
+            };
+
+            return View(patientAppointment);
         }
 
+        [Authorize(Roles = "Admin,Patient")]
         public IActionResult Create()
         {
             return View();
@@ -88,19 +111,18 @@ namespace MyHospital_MVC.Controllers
         [HttpPost]
         public IActionResult Create(Appointment appointment)
         {
-            //appointment = _appDbContext.Appointments.Where(x => x.Date == date).FirstOrDefault();
-
-            //if (appointment != null)
-            //{
-            //    return RedirectToAction(nameof(Index));
-            //}
-            //else
-            //{
-            //}
             appointmentService.AddAppointment(appointment);
-            return RedirectToAction(nameof(Index));
+            if (User.IsInRole("Patient"))
+            {
+                return RedirectToAction(nameof(ThankYou));
+            }
+            else
+            {
+                return RedirectToAction(nameof(Index));
+            }
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id)
         {
             var appointmentDetails = appointmentService.GetAppointmentById(id);
@@ -126,6 +148,7 @@ namespace MyHospital_MVC.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var appointmentDetails = appointmentService.GetAppointmentById(id);

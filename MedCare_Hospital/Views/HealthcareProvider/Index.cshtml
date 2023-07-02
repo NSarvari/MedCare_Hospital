@@ -2,191 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            background-image: url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?w=360');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-
-        .responsive-cell-block {
-            min-height: 75px;
-        }
-
-        .text-blk {
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 0px;
-            margin-left: 0px;
-            line-height: 25px;
-        }
-
-        .responsive-container-block {
-            min-height: 75px;
-            height: fit-content;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 0px;
-            margin-right: auto;
-            margin-bottom: 0px;
-            margin-left: auto;
-            justify-content: space-evenly;
-        }
-
-        .team-head-text {
-            font-family: 'Felix Titling';
-            font-size: 48px;
-            font-weight: 900;
-            text-align: center;
-        }
-
-        .team-head-text {
-            line-height: 50px;
-            width: 100%;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 50px;
-            margin-left: 0px;
-        }
-
-        .container {
-            max-width: 1380px;
-            margin-right: auto;
-            margin-left: auto;
-            padding-top: 0px;
-            padding-right: 30px;
-            padding-bottom: 0px;
-            padding-left: 30px;
-        }
-
-        .card {
-            text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 30px;
-            padding-right: 25px;
-            padding-bottom: 30px;
-            padding-left: 25px;
-            height: 450px;
-        }
-
-        .card-container {
-            width: 280px;
-            margin-top: 0px;
-            margin-right: 10px;
-            margin-bottom: 25px;
-            margin-left: 10px;
-        }
-
-        .name {
-            font-family: 'Times New Roman', Times, serif;
-            margin-top: 20px;
-            margin-right: 0px;
-            margin-bottom: 5px;
-            margin-left: 0px;
-            font-size: 18px;
-            font-weight: 800;
-        }
-
-        .position {
-            font-family: 'Times New Roman', Times, serif;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 10px;
-            margin-left: 0px;
-        }
-
-        .feature-text {
-            font-family: 'Times New Roman', Times, serif;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 20px;
-            margin-left: 0px;
-            color: rgb(122, 122, 122);
-            line-height: 30px;
-        }
-
-        .team-image-wrapper {
-            clip-path: circle(50% at 50% 50%);
-            width: 130px;
-            height: 130px;
-        }
-
-        .team-member-image {
-            max-width: 100%;
-        }
-
-        .detail-button {
-            background-color: gray;
-            border: none;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 15px;
-            padding: 10px 50px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .delete-button {
-            background-color: red;
-            border: none;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 15px;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .edit-button {
-            background-color: dodgerblue;
-            border: none;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 15px;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-        .btn-create {
-            background-color: #0097a7;
-            border: 2px solid #fff;
-            color: #fff;
-            font-family: 'Arial Rounded MT';
-            font-size: 15px;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-
-            .btn-create:hover {
-                border: 2px solid black;
-                background-color: white;
-                color: #0097a7;
-                cursor: pointer;
-            }
-    </style>
+    <link rel="stylesheet" href="./css/HealthcareProviderIndex.css" />
 </head>
 <body>
     <div class="responsive-container-block container">
@@ -215,24 +31,23 @@
                         </p>
                         <div class="w3-show-inline-block">
                             <div class="w3-bar">
-                                <a class="btn edit-button" asp-action="Update" asp-route-id="@healthcareProvider.HealthcareProviderId"><i class="bi bi-pencil-square"></i>Edit</a>
-                                <a class="btn delete-button" asp-action="Delete" asp-route-id="@healthcareProvider.HealthcareProviderId"><i class="bi bi-trash"></i>Delete</a>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a class="btn edit-button" asp-action="Update" asp-route-id="@healthcareProvider.HealthcareProviderId"><i class="bi bi-pencil-square"></i>Edit</a>
+                                    <a class="btn delete-button" asp-action="Delete" asp-route-id="@healthcareProvider.HealthcareProviderId"><i class="bi bi-trash"></i>Delete</a>
+                                }
                             </div>
                         </div>
-
-                  @*      <a class="btn detail-button" asp-action="Details" asp-route-id="@healthcareProvider.HealthcareProviderId">
-                            <i class="bi bi-pencil-square"></i>Details
-                        </a>
-*@
-
                     </div>
                 </div>
             }
         </div>
 
         <div>
-            <a asp-controller="HealthcareProvider" asp-action="Create" class="btn btn-create">Add New Healthcare Provider</a>
-
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-controller="HealthcareProvider" asp-action="Create" class="btn btn-create">Add New Healthcare Provider</a>
+            }
         </div>
     </div>
 </body>

@@ -7,7 +7,7 @@ using MyHospital_MVC.Services.IServices;
 
 namespace MyHospital_MVC.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="Patient,Admin")]
     public class HealthcareProviderController : Controller
     {
         private readonly IHealthcareProviderService healthcareProviderService;
@@ -52,17 +52,7 @@ namespace MyHospital_MVC.Controllers
             return Ok(healthcareProvider);
         }
 
-        public IActionResult Details(int id)
-        {
-            var healthcareProviderDetials = healthcareProviderService.GetHealthcareProviderById(id);
-
-            if (healthcareProviderDetials == null)
-            {
-                return View("NotFound");
-            }
-            return View(healthcareProviderDetials);
-        }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             return View();
@@ -76,6 +66,7 @@ namespace MyHospital_MVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id)
         {
             var healthcareProviderDetails = healthcareProviderService.GetHealthcareProviderById(id);
@@ -101,6 +92,7 @@ namespace MyHospital_MVC.Controllers
 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             var healthcareProviderDetails = healthcareProviderService.GetHealthcareProviderById(id);

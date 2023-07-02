@@ -5,8 +5,116 @@
       "PackagePath": "staticwebassets\\MedCare_Hospital.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\AppointmentCreate.css",
+      "PackagePath": "staticwebassets\\css\\AppointmentCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\AppointmentDelete.css",
+      "PackagePath": "staticwebassets\\css\\AppointmentDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\AppointmentDetails.css",
+      "PackagePath": "staticwebassets\\css\\AppointmentDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\AppointmentIndex.css",
+      "PackagePath": "staticwebassets\\css\\AppointmentIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\FeedbackCreate.css",
+      "PackagePath": "staticwebassets\\css\\FeedbackCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\FeedbackDelete.css",
+      "PackagePath": "staticwebassets\\css\\FeedbackDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\FeedbackIndex.css",
+      "PackagePath": "staticwebassets\\css\\FeedbackIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\FeedbackUpdate.css",
+      "PackagePath": "staticwebassets\\css\\FeedbackUpdate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\HealthcareProviderCreate.css",
+      "PackagePath": "staticwebassets\\css\\HealthcareProviderCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\HealthcareProviderDelete.css",
+      "PackagePath": "staticwebassets\\css\\HealthcareProviderDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\HealthcareProviderIndex.css",
+      "PackagePath": "staticwebassets\\css\\HealthcareProviderIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\HealthcareProviderUpdate.css",
+      "PackagePath": "staticwebassets\\css\\HealthcareProviderUpdate.css"
+    },
+    {
       "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordCreate.css",
+      "PackagePath": "staticwebassets\\css\\MedicalRecordCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordDelete.css",
+      "PackagePath": "staticwebassets\\css\\MedicalRecordDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordDetails.css",
+      "PackagePath": "staticwebassets\\css\\MedicalRecordDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordIndex.css",
+      "PackagePath": "staticwebassets\\css\\MedicalRecordIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\MedicalRecordUpdate.css",
+      "PackagePath": "staticwebassets\\css\\MedicalRecordUpdate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PHCreate.css",
+      "PackagePath": "staticwebassets\\css\\PHCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PHDelete.css",
+      "PackagePath": "staticwebassets\\css\\PHDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PHIndex.css",
+      "PackagePath": "staticwebassets\\css\\PHIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatienCreate.css",
+      "PackagePath": "staticwebassets\\css\\PatienCreate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatientDelete.css",
+      "PackagePath": "staticwebassets\\css\\PatientDelete.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatientDetails.css",
+      "PackagePath": "staticwebassets\\css\\PatientDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatientIndex.css",
+      "PackagePath": "staticwebassets\\css\\PatientIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\PatientUpdate.css",
+      "PackagePath": "staticwebassets\\css\\PatientUpdate.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\SurveyIndex.css",
+      "PackagePath": "staticwebassets\\css\\SurveyIndex.css"
+    },
+    {
+      "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\SurveyThanks.css",
+      "PackagePath": "staticwebassets\\css\\SurveyThanks.css"
     },
     {
       "Id": "C:\\Users\\Nabila\\source\\repos\\MedCare_Hospital\\MedCare_Hospital\\wwwroot\\css\\site.css",

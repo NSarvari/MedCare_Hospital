@@ -1,47 +1,10 @@
 ﻿@model MedCare_Hospital.Data.ViewModels.PatientFeedback
 
 <html>
-    <head>
-        <style>
-        body {
-            background-color: #e8f6f3;
-        }
-
-        .heading {
-            font-family: 'Century Schoolbook';
-            margin-bottom: 40px;
-        }
-
-        input[type=number], textarea {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 12px 0;
-            box-sizing: border-box;
-            border: 2px solid #0097a7;
-            border-radius: 4px;
-        }
-
-        .btn-update {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color: #0097a7;
-            color: #fff;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-
-        .btn-index {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 20px;
-            background-color: #fff;
-            border: 2px solid #0097a7;
-            color: #0097a7;
-            padding-left: 50px;
-            padding-right: 50px;
-        }
-        </style>
-    </head>
-    <body>
+<head>
+    <link rel="stylesheet" href="../../css/FeedbackUpdate.css" />
+</head>
+<body>
     <h1>Edit Comment</h1>
     @using (Html.BeginForm("Update", "Feedback", FormMethod.Post))
     {
@@ -61,5 +24,5 @@
             <a asp-action="Index" class="btn btn-index">Cancel</a>
         </div>
     }
-    </body>
+</body>
 </html>

@@ -1,30 +1,39 @@
-﻿@model MyHospital_MVC.Models.Appointment
+﻿@model MedCare_Hospital.Data.ViewModels.PatientAppointment
 
-<h2>Appointment Details</h2>
-
-<table class="table">
-    <tbody>
-        <tr>
-            <td><strong>Appointment ID:</strong></td>
-            <td>@Model.AppointmentId</td>
-        </tr>
-        <tr>
-            <td><strong>Appointment Date:</strong></td>
-            <td>@Model.Date</td>
-        </tr>
-        <tr>
-            <td><strong>Reason:</strong></td>
-            <td>@Model.Reason</td>
-        </tr>
-        <tr>
-            <td><strong>Patient Id:</strong></td>
-            <td>@Model.PatientId</td>
-        </tr>
-        <tr>
-            <td><strong>Healthcare Provider Id:</strong></td>
-            <td>@Model.HealthcareProviderId</td>
-        </tr>
-    </tbody>
-</table>
-
-<a class="btn btn-outline-secondary" asp-controller="Appointment" asp-action="Index">Back to List</a>
+<html>
+<head>
+    <link rel="stylesheet" href="../../css/AppointmentDetails.css" />
+</head>
+<body>
+    <div class="container-details">
+        <h2 class="heading">Appointment's Detials</h2>
+        <div class="content">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td><strong>Appointment ID:</strong></td>
+                        <td>@Model.Appointment.AppointmentId</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Appointment Date:</strong></td>
+                        <td>@Model.Appointment.Date</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reason:</strong></td>
+                        <td>@Model.Appointment.Reason</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Patient Name:</strong></td>
+                        <td>@Model.Patient.Name</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Healthcare Provider Name:</strong></td>
+                        <td>@Model.HealthcareProvider.Name</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a class="btn btn-index" asp-controller="Appointment" asp-action="Index">Back to List</a>
+    </div>
+</body>
+</html>

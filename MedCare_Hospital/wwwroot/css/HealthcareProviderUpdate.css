@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #e8f6f3;
+}
+
+.heading {
+    font-family: 'Century Schoolbook';
+    margin-bottom: 40px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 0;
+    box-sizing: border-box;
+    border: 2px solid #0097a7;
+    border-radius: 4px;
+}
+
+.btn-update {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: #0097a7;
+    color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.btn-index {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-color: #fff;
+    border: 2px solid #0097a7;
+    color: #0097a7;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+div .doctor-img {
+    border: 4px solid #0097a7;
+    border-radius: 5px;
+    padding: 5px;
+    width: 450px;
+    margin-right: 100px;
+    margin-left: 50px;
+}

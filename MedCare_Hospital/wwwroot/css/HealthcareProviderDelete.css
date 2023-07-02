@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #61d1c5;
+}
+
+.delete-img {
+    margin-top: 100px;
+}
+
+.content-delete {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    opacity: 90%;
+    height: 560px;
+    width: 400px;
+    padding: 25px 25px;
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.btn-index {
+    font-size: 18px;
+    background-color: #fff;
+    border: 2px solid #0097a7;
+    color: #0097a7;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.delete-button {
+    background-color: red;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}

@@ -8,7 +8,7 @@ using MyHospital_MVC.Models;
 
 namespace MyHospital.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin,HealthcareProvider")]
     public class PatientController : Controller
     {
         private readonly IPatientService patientService;
@@ -57,14 +57,6 @@ namespace MyHospital.Controllers
 
         public IActionResult Details(int id)
         {
-            //var patientDetials = patientService.GetPatientById(id);
-
-            //if (patientDetials == null)
-            //{
-            //    return View("NotFound");
-            //}
-            //return View(patientDetials);
-
             // Retrieve the patient from the database
             var patient = context.Patients.Find(id);
 

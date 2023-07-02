@@ -56,14 +56,6 @@ namespace MyHospital_MVC.Controllers
 
         public IActionResult Details(int id)
         {
-            //var medicalRecordDetials = medicalRecordService.GetMedicalRecordById(id);
-
-            //if (medicalRecordDetials == null)
-            //{
-            //    return View("NotFound");
-            //}
-            //return View(medicalRecordDetials);
-
             // Retrieve the patient from the database
             var medicalRecord = context.MedicalRecords.Find(id);
 
@@ -86,6 +78,7 @@ namespace MyHospital_MVC.Controllers
             return View(viewModel);
         }
 
+        [Authorize(Roles = "Admin,HealthcareProvider")]
         public IActionResult Create()
         {
             return View();
@@ -99,6 +92,7 @@ namespace MyHospital_MVC.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin,HealthcareProvider")]
         public IActionResult Update(int id)
         {
             var medicalRecordDetails = medicalRecordService.GetMedicalRecordById(id);
@@ -124,6 +118,7 @@ namespace MyHospital_MVC.Controllers
 
         }
 
+        [Authorize(Roles = "Admin,HealthcareProvider")]
         public IActionResult Delete(int id)
         {
             var medicalRecordDetails = medicalRecordService.GetMedicalRecordById(id);

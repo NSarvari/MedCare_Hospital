@@ -12,7 +12,7 @@ using MyHospital_MVC.Services.IServices;
 
 namespace MedCare_Hospital.Controllers
 {
-    [Authorize]
+    [Authorize(Roles="Admin,Patient")]
     public class FeedbackController : Controller
     {
         private readonly IFeedbackService feedbackService;
@@ -62,6 +62,7 @@ namespace MedCare_Hospital.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Feedback/Edit/5
         public IActionResult Update(int id)
         {
@@ -76,6 +77,7 @@ namespace MedCare_Hospital.Controllers
 
         // POST: Feedback/Edit/5
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public IActionResult Update(int id, PatientFeedback patientFeedback)
         {
             if (id != patientFeedback.Feedback.FeedbackId)
@@ -87,6 +89,7 @@ namespace MedCare_Hospital.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Feedback/Delete/5
         public IActionResult Delete(int id)
         {
