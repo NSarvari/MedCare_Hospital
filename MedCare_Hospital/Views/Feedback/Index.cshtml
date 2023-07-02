@@ -1,31 +1,103 @@
 ﻿@model IEnumerable<MedCare_Hospital.Data.ViewModels.PatientFeedback>
 
-
-<h1>Feedback List</h1>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Author</th>
-            <th>Comment</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var patientFeedback in Model)
-        {
-            <tr>
-                <td>@patientFeedback.Patient.Name</td>
-                <td>@patientFeedback.Feedback.Text</td>
-                <td class="align-middle">
-                    <a class="btn detail-button" asp-action="Details" asp-route-id="@patientFeedback.FeedbackId">
-                        <i class="bi bi-pencil-square"></i>Details
-                    </a>
-                    <a class="btn edit-button" asp-action="Update" asp-route-id="@patientFeedback.Feedback.FeedbackId"><i class="bi bi-pencil-square"></i>Edit</a>
-                    <a class="btn delete-button" asp-action="Delete" asp-route-id="@patientFeedback.Feedback.FeedbackId"><i class="bi bi-trash"></i>Delete</a>
-                </td>
-            </tr>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/abstract-medical-wallpaper-template-design_53876-61802.jpg?w=360');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
         }
-    </tbody>
-</table>
-<a asp-controller="Feedback" asp-action="Create" class="btn btn-create">Add New Feedback</a>
+        .heading{
+            font-family: 'Felix Titling';
+            font-size: 48px;
+            font-weight: 900;
+            text-align: center;
+        }
+        .author{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:20px;
+            font-weight: 800;
+        }
+        .comment{
+            background-color: #fff;
+            opacity: 75%;
+            padding: 25px 25px;
+            font-family:'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        .delete-button {
+            background-color: red;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .btn-create {
+            background-color: #0097a7;
+            border: 2px solid #fff;
+            color: #fff;
+            font-family: 'Arial Rounded MT';
+            font-size: 15px;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+            .btn-create:hover {
+                border: 2px solid black;
+                background-color: white;
+                color: #0097a7;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Patient's Feedback</h1>
+    @foreach (var patientFeedback in Model)
+    {
+        <div class="author">
+            @patientFeedback.Patient.Name
+        </div>
+        <div class="comment">
+            @patientFeedback.Feedback.Text
+        </div>
+        <div>
+            <a class="btn edit-button" asp-action="Update" asp-route-id="@patientFeedback.Feedback.FeedbackId"><i class="bi bi-pencil-square"></i>Edit</a>
+            <a class="btn delete-button" asp-action="Delete" asp-route-id="@patientFeedback.Feedback.FeedbackId"><i class="bi bi-trash"></i>Delete</a>
+        </div>
+    }
+    <a asp-controller="Feedback" asp-action="Create" class="btn btn-create">Add New Feedback</a>
+
+
+</body>
+</html>
